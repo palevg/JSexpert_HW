@@ -31,7 +31,7 @@ function correctRaven(count) {
 	return result;
 }
 
-for (var i = 1; i < 135; i++) {
+for (let i = 1; i < 135; i++) {
 	console.log(correctRaven(i));
 }
 console.log(correctRaven());    //Error - count is not found

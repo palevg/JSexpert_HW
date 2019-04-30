@@ -7,17 +7,13 @@ function task1() {
 	console.log(goods.join());
 }
 
+/* 2. Преобразовать текущую дату и время в понятный человеку формат: 08:05 01/01/2018. Используя шаблонные строки. */
 function addZero(target, incMonth) {
-	if (incMonth) {
-		target++;
-	}
-	if (target < 10) {
-		target = "0" + target;
-	}
+	if (incMonth) {target++;}
+	if (target < 10) {target = "0" + target;}
 	return target;
 }
 
-/* 2. Преобразовать текущую дату и время в понятный человеку формат: 08:05 01/01/2018. Используя шаблонные строки. */
 function task2() {
 	let date = new (Date),
 			hours = addZero(date.getHours(), false),

@@ -4,15 +4,15 @@
 Заготовку сможете найти здесь: https://www.jsexpert.net/wp-content/uploads/2017/12/homeWork_17.zip
 Напишите ваш функционал в main.js. Файл data.js уже подключен, по этому просто пишите код вашей программы, массив должен быть доступен.*/
 
-var btn = document.getElementById("play"),
-					taskResult = document.getElementById("result");
+const btn = document.getElementById("play"),
+			taskResult = document.getElementById("result");
 
 /* 1. С помощью функции splice необходимо вырезать 6-й элемент массива.
 		В результате ваш массив должен стать короче на один элемент.*/
 function spliceItem(item) {
 	if (data.length > 5) {
 		let str = "Начальная длина массива - " + data.length + " записей.<br>Удаляем шестой элемент массива. Это запись, где name=";
-		let deleted = data.splice(item - 1, 1);
+		const deleted = data.splice(item - 1, 1);
 		str += deleted[0].name + ".<br>"
 		for (let value of data) {
 			str += value.name + ", ";

@@ -45,7 +45,7 @@ elemResult.innerHTML += 'Число: <b>20</b><br>';
 elemResult.innerHTML += 'Число: <b>10</b><br>';
 elemResult.innerHTML += 'Число: <b>0</b><br>';
 */
-let numbers = [100, 80, 60, 50, 40, 20, 10, 0];
+const numbers = [100, 80, 60, 50, 40, 20, 10, 0];
 for (let item of numbers) {
 	elemResult.innerHTML += 'Число: <b>' + item + '</b><br>';
 }

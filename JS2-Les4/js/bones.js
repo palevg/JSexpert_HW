@@ -27,10 +27,10 @@ let str = "";
 
 function run() {
 	let total = 0;
-	for (var i = 1; i <= 15; i++) {
-		if (i == 8 || i == 13) {continue;}
-		var first = getRndNumber();
-		var second = getRndNumber();
+	for (let i = 1; i <= 15; i++) {
+		if (i === 8 || i === 13) {continue;}
+		const first = getRndNumber(),
+					second = getRndNumber();
 		setResult("Первая кость: " + first + "; вторая кость: " + second + "<br>");
 		isNumbersEqual(first, second);
 		isBigDifference(first, second);
@@ -49,7 +49,7 @@ function setResult(someText) {
 }
 
 function isNumbersEqual(number1, number2) {
-	if (number1 == number2) {
+	if (number1 === number2) {
 		setResult("Выпал дубль. Число " + number1 + "<br>");
 	}
 }
