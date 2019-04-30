@@ -55,20 +55,23 @@ var total = 0
 Проверяем total с помощью оператора "? :" и выводим результат.
 */
 
-var total = 0;
-for (var i = 1; i <= 15; i++) {
-	if (i == 8 || i == 13) {continue;}
-	var first = Math.floor((Math.random() * 6) + 1);
-	var second = Math.floor((Math.random() * 6) + 1);
-	document.getElementById("result").innerHTML += "Первая кость: " + first + " Вторая кость: " + second + "<br>";
-	if (first == second) {
-		document.getElementById("result").innerHTML += "Выпал дубль. Число " + first + "<br>";
+let total = 0,
+		str;
+for (let i = 1; i <= 15; i++) {
+	if (i === 8 || i === 13) {continue;}
+	const first = Math.floor((Math.random() * 6) + 1);
+	const second = Math.floor((Math.random() * 6) + 1);
+	str = "Первая кость: " + first + " Вторая кость: " + second + "<br>";
+	if (first === second) {
+		str += "Выпал дубль. Число " + first + "<br>";
 	}
 	if ((first < 3 && second > 4) || (first > 4 && second < 3)) {
-		var razbros = second - first;
+		const razbros = second - first;
 		if (razbros < 0) {razbros *= -1;}
-		document.getElementById("result").innerHTML += "Большой разброс между костями. Разница составляет " + razbros + "<br>";
+		str += "Большой разброс между костями. Разница составляет " + razbros + "<br>";
 	}
+	document.getElementById("result").innerHTML += str;
 	total += first + second;
 }
-total > 100 ? document.getElementById("result").innerHTML += "Победа, вы набрали " + total + " очков" : document.getElementById("result").innerHTML += "Вы проиграли, у вас " + total + " очков";
+total > 100 ? str = "Победа, вы набрали " + total + " очков" : str = "Вы проиграли, у вас " + total + " очков";
+document.getElementById("result").innerHTML += str;
